@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>디자인 마케터 포트폴리오</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "정예린",
+  "jobTitle": "디자인 마케터",
+  "url": "[포트폴리오 주소 입력, 예: https://yerin-design.com]",
+  "image": "[프로필 사진 URL 입력]",
+  "description": "[디자인 마케터로서의 장점을 적어주세요. 예: 시각적인 매력과 마케팅 데이터를 결합하여 타겟 고객의 마음을 사로잡는 디자인 마케터입니다. 트렌드를 빠르게 읽고 브랜딩에 맞는 최적의 솔루션을 제안합니다.]",
+  "knowsAbout": [
+    "[보유 기술 1, 예: Adobe Photoshop / Illustrator]",
+    "[보유 기술 2, 예: 콘텐츠 마케팅 기획]",
+    "[보유 기술 3, 예: SNS 채널 운영 및 분석]",
+    "[소프트 스킬, 예: 트렌드 캐칭 및 시각화 능력]",
+    "[전문 분야, 예: 브랜드 아이덴티티(BI) 디자인]"
+  ],
+  "sameAs": [
+    "https://www.instagram.com/ye._.c._.o",
+    "https://blog.naver.com/yerin0666",
+    
+ ],
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "인하공업전문대학"
+  },
+  "award": [
+    "[수상 내역이나 성과 입력. 예: 2025년 마케팅 공모전 우수상 또는 특정 캠페인 도달률 달성 성과]"
+  ]
+}
+</script>
+    <style>
+        /* 기본 스타일 리셋 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 네비게이션 바 */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(5px);
+            box-shadow: 0 1px 10px rgba(0,0,0,0.05);
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: #0070f3;
+        }
+
+        .nav-links a {
+            margin-left: 30px;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #0070f3;
+        }
+
+        /* 히어로 섹션 (메인 카피) */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135px, #f5f7fa 0%, #c3cfe2 100%);
+            padding-top: 70px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            line-height: 1.3;
+            margin-bottom: 24px;
+            word-break: keep-all;
+        }
+
+        .hero h1 span {
+            color: #0070f3;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            color: #555;
+            margin-bottom: 40px;
+            word-break: keep-all;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #0070f3;
+            color: white;
+            padding: 12px 32px;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #0051b3;
+        }
+
+        /* 섹션 공통 스타일 */
+        section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 4px;
+            background-color: #0070f3;
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
+
+        /* 자기소개 섹션 */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            word-break: keep-all;
+        }
+
+        .about-text p {
+            color: #555;
+            word-break: keep-all;
+        }
+
+        .about-image-container {
+            width: 100%;
+            max-width: 340px;
+            margin: 0 auto;
+        }
+
+        .about-image {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 3 / 4; /* 증명사진 비율 유지 */
+            border-radius: 12px;
+            object-fit: cover;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+        }
+
+        /* 핵심 역량 (Skills) 섹션 */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 25px;
+        }
+
+        .skill-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            border: 1px solid #eef2f5;
+            transition: transform 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .skill-icon {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .skill-card h3 {
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .skill-card p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        /* 포트폴리오 프로젝트 섹션 */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+
+        .project-img {
+            height: 200px;
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #888;
+            font-weight: 600;
+        }
+
+        .project-info {
+            padding: 25px;
+        }
+
+        .project-tag {
+            display: inline-block;
+            background: #e1ecf8;
+            color: #0070f3;
+            padding: 3px 10px;
+            border-radius: 3px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .project-info h3 {
+            margin-bottom: 10px;
+        }
+
+        .project-info p {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        /* 푸터(연락처) */
+        footer {
+            background-color: #222;
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+            color: #aaa;
+        }
+
+        .contact-info {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: white;
+            margin-top: 15px;
+        }
+
+        /* 반응형 모바일 스타일 */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .hero p { font-size: 1.1rem; }
+            .about-grid { grid-template-columns: 1fr; gap: 35px; }
+            .about-image-container { max-width: 280px; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <div class="logo">PORTFOLIO.</div>
+            <nav class="nav-links">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>디자인을 아는 마케터,<br><span>데이터로 성과를 증명하다.</span></h1>
+            <p>어도비 편집과 SEO, GA 역량으로<br>크리에이티브와 성과를 모두 잡겠습니다.</p>
+            <a href="#projects" class="btn">프로젝트 보기</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <h3>안녕하세요, 준비된 퍼포먼스 마케터 OOO입니다.</h3>
+                    <p>시각적인 아름다움을 만드는 디자인 역량과, 숫자를 통해 현상을 분석하는 데이터 역량을 동시에 균형 있게 발전시켜 왔습니다. 보기 좋은 콘텐츠에 머무르지 않고, 고객의 유입부터 전환까지 데이터 기반의 최적화된 저니(Journey)를 설계합니다.</p>
+                </div>
+                <div class="about-image-container">
+                    <img src="profile.png" alt="퍼포먼스 마케터 OOO 프로필 사진" class="about-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" style="background-color: #fff;">
+        <div class="container">
+            <h2 class="section-title">Core Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">🎨</div>
+                    <h3>Adobe Creative</h3>
+                    <p>Photoshop, Premiere Pro를 활용한 브랜드 맞춤형 이미지 디자인 및 영상 편집, 광고 소재 제작 가능</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🔍</div>
+                    <h3>SEO (검색 최적화)</h3>
+                    <p>검색 엔진의 매커니즘 이해를 바탕으로 한 웹사이트 기초 진단 및 유기적(Organic) 트래픽 개선 기획</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">📊</div>
+                    <h3>Google Analytics</h3>
+                    <p>GA4 등 데이터 로그분석 툴을 활용한 사용자 행동 데이터 추적, 대시보드 해석 및 마케팅 인사이트 도출</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <div class="project-img">Project Image 1</div>
+                    <div class="project-info">
+                        <span class="project-tag">GA 분석 / 퍼포먼스</span>
+                        <h3>구글 애널리틱스 기반 유입 전환 개선 프로젝트</h3>
+                        <p>웹사이트 이탈률 분석을 통해 UI/UX 개선안을 제안하고, 전환율을 O% 개선한 경험입니다.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img">Project Image 2</div>
+                    <div class="project-info">
+                        <span class="project-tag">어도비 / 콘텐츠 마케팅</span>
+                        <h3>SNS 광고 소재 제작 및 효율 테스트</h3>
+                        <p>Premiere와 Photoshop을 활용해 숏폼 영상 및 카드뉴스를 직접 제작하고 성과를 측정했습니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" style="display: none;"></section>
+    <footer>
+        <div class="container">
+            <h2>Let's Work Together!</h2>
+            <p>크리에이티브와 데이터를 연결하는 마케터가 되겠습니다.</p>
+            <div class="contact-info">
+                <p>Email: your-email@email.com</p>
+                <p>Phone: 010-1234-5678</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
