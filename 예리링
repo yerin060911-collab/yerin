@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Pretendard 웹폰트 불러오기 -->
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
+
+    <!-- Google / 검색 엔진 최적화 (SEO) -->
+    <title>정예린 | 디자인하는 마케터 : SNS 광고 소재 제작 및 브랜드 마케팅</title>
+    <meta name="description" content="디자인의 이해를 바탕으로 클릭을 부르는 SNS 광고 소재를 제작합니다. 인하공업전문대학에서 다진 실무 감각으로 성과를 내는 디자인 마케팅을 지향하는 정예린입니다.">
+
+    <!-- 검색 엔진 구조화 데이터 (Schema Markup) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "정예린",
+      "jobTitle": "디자인 마케터",
+      "url": "https://blog.naver.com/yerin0666",
+      "image": "profile.jpg.png",
+      "description": "시각적인 매력과 마케팅 데이터를 결합하여 타겟 고객의 마음을 사로잡는 디자인 마케터입니다. 트렌드를 빠르게 읽고 브랜딩에 맞는 최적의 솔루션을 제안합니다.",
+      "knowsAbout": [
+        "Adobe Photoshop",
+        "Adobe Premiere Pro",
+        "SNS 광고 소재 제작",
+        "콘텐츠 마케팅 기획",
+        "트렌드 캐칭 및 비주얼 라이팅"
+      ],
+      "sameAs": [
+        "https://www.instagram.com/ye._.c._.o",
+        "https://blog.naver.com/yerin0666"
+      ],
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "인하공업전문대학"
+      }
+    }
+    </script>
+
+    <!-- 카카오톡, 인스타그램 등 SNS 공유 최적화 (Open Graph) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="디자인 마케터 정예린 | 감각을 성과로 연결하는 포트폴리오">
+    <meta property="og:description" content="디자인에 대한 이해를 바탕으로 '클릭을 부르는 SNS 광고 소재'를 제작합니다. 정예린의 마케팅 포트폴리오를 확인해 보세요.">
+    <meta property="og:image" content="profile.jpg.png">
+    <meta property="og:url" content="https://blog.naver.com/yerin0666">
+    <meta property="og:site_name" content="정예린 포트폴리오">
+
+    <!-- 트위터 / X 공유 최적화 -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="디자인 마케터 정예린 | 감각을 성과로 연결하는 포트폴리오">
+    <meta name="twitter:description" content="디자인에 대한 이해를 바탕으로 '클릭을 부르는 SNS 광고 소재'를 제작합니다. 정예린의 마케팅 포트폴리오를 확인해 보세요.">
+    <meta name="twitter:image" content="profile.jpg.png">
+
+    <style>
+        /* 기본 스타일 리셋 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 네비게이션 바 */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(5px);
+            box-shadow: 0 1px 10px rgba(0,0,0,0.05);
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: #0070f3;
+        }
+
+        .nav-links a {
+            margin-left: 30px;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #0070f3;
+        }
+
+        /* 히어로 섹션 (메인 카피) */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135px, #f5f7fa 0%, #c3cfe2 100%);
+            padding-top: 70px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            line-height: 1.3;
+            margin-bottom: 24px;
+            word-break: keep-all;
+        }
+
+        .hero h1 span {
+            color: #0070f3;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            color: #555;
+            margin-bottom: 40px;
+            word-break: keep-all;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #0070f3;
+            color: white;
+            padding: 12px 32px;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #0051b3;
+        }
+
+        /* 섹션 공통 스타일 */
+        section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 4px;
+            background-color: #0070f3;
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
+
+        /* 자기소개 섹션 */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            word-break: keep-all;
+        }
+
+        .about-text p {
+            color: #555;
+            word-break: keep-all;
+        }
+
+        .about-image-container {
+            width: 100%;
+            max-width: 340px;
+            margin: 0 auto;
+        }
+
+        .about-image {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 3 / 4; /* 증명사진 비율 유지 */
+            border-radius: 12px;
+            object-fit: cover;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+        }
+
+        /* 핵심 역량 (Skills) 섹션 */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 25px;
+        }
+
+        .skill-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            border: 1px solid #eef2f5;
+            transition: transform 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .skill-icon {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .skill-card h3 {
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .skill-card p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        /* 포트폴리오 프로젝트 섹션 */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+
+        .project-img {
+            height: 200px;
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #888;
+            font-weight: 600;
+        }
+
+        .project-info {
+            padding: 25px;
+        }
+
+        .project-tag {
+            display: inline-block;
+            background: #e1ecf8;
+            color: #0070f3;
+            padding: 3px 10px;
+            border-radius: 3px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .project-info h3 {
+            margin-bottom: 10px;
+        }
+
+        .project-info p {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        /* 소셜 링크 버튼 레이아웃 추가 */
+        .sns-links {
+            margin-top: 20px;
+        }
+        .sns-links a {
+            display: inline-block;
+            margin-right: 15px;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: white;
+        }
+        .link-ig { background-color: #E1306C; }
+        .link-blog { background-color: #03C75A; }
+
+        /* 푸터(연락처) */
+        footer {
+            background-color: #222;
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+            color: #aaa;
+        }
+
+        .contact-info {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: white;
+            margin-top: 15px;
+        }
+
+        /* 반응형 모바일 스타일 */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .hero p { font-size: 1.1rem; }
+            .about-grid { grid-template-columns: 1fr; gap: 35px; }
+            .about-image-container { max-width: 280px; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <div class="logo">PORTFOLIO.</div>
+            <nav class="nav-links">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>디자인을 아는 마케터,<br><span>데이터로 성과를 증명하다.</span></h1>
+            <p>어도비 크리에이티브 역량과 SNS 마케팅 감각으로<br>크리에이티브와 성과를 모두 잡겠습니다.</p>
+            <a href="#projects" class="btn">프로젝트 보기</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <h3>안녕하세요, 준비된 디자인 마케터 정예린입니다.</h3>
+                    <p>인하공업전문대학에서 전공 실무 감각을 다지며, 시각적인 메시지를 구성하는 디자인 역량과 브랜딩 마케팅의 시너지를 연구해 왔습니다. 유저의 시선을 사로잡아 유입을 유도하고 실제 성과를 만들어내는 SNS 광고 소재 기획 및 제작에 탁월한 강점이 있습니다.</p>
+                    <div class="sns-links">
+                        <a href="https://www.instagram.com/ye._.c._.o" target="_blank" class="link-ig">Instagram</a>
+                        <a href="https://blog.naver.com/yerin0666" target="_blank" class="link-blog">Naver Blog</a>
+                    </div>
+                </div>
+                <div class="about-image-container">
+                    <img src="profile.jpg.png" alt="디자인 마케터 정예린 프로필 사진" class="about-image">
+                    
+                    <!-- 🏫 인하공업전문대학 바로가기 배너 추가 -->
+                    <a href="https://www.inhatc.ac.kr" target="_blank" style="display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 15px; padding: 12px; background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; color: #334155; font-size: 0.9rem; font-weight: 600; box-shadow: 0 4px 15px rgba(0,0,0,0.04); text-decoration: none; transition: all 0.2s;" onmouseover="this.style.borderColor='#0070f3'; this.style.color='#0070f3'; this.style.boxShadow='0 4px 20px rgba(0,112,243,0.1)';" onmouseout="this.style.borderColor='#e2e8f0'; this.style.color='#334155'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.04)';">
+                        <span style="font-size: 1.1rem;">🏫</span> 인하공업전문대학 바로가기
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" style="background-color: #fff;">
+        <div class="container">
+            <h2 class="section-title">Core Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">🎨</div>
+                    <h3>Adobe Creative</h3>
+                    <p>Photoshop, Illustrator, Premiere Pro를 활용한 브랜드 맞춤형 시각 콘텐츠 및 광고 소재 기획·제작</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">📱</div>
+                    <h3>SNS 광고 소재 제작</h3>
+                    <p>트렌드를 빠르게 분석하여 인스타그램 등 주요 소셜 채널 유저의 클릭을 유도하는 크리에이티브 설계</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">✍️</div>
+                    <h3>콘텐츠 마케팅</h3>
+                    <p>네이버 블로그 및 SNS 운영 경험을 바탕으로, 브랜드 아이덴티티를 명확히 전달하는 비주얼 콘텐츠 라이팅</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <div class="project-img">Project Image 1</div>
+                    <div class="project-info">
+                        <span class="project-tag">디자인 / SNS 마케팅</span>
+                        <h3>트렌드 기반 SNS 광고 소재 크리에이티브 프로젝트</h3>
+                        <p>타겟 유저의 행동 양식을 고려한 디자인 요소를 결합하여 실질적인 유입과 전환을 유도한 광고 제작 경험입니다.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img">Project Image 2</div>
+                    <div class="project-info">
+                        <span class="project-tag">브랜딩 / 블로그 마케팅</span>
+                        <h3>비주얼 콘텐츠 기획 및 채널 활성화 프로젝트</h3>
+                        <p>감각적인 썸네일 디자인과 타겟 맞춤형 스토리텔링을 통해 유기적 트래픽 성장을 이끌어낸 브랜딩 경험입니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <!-- 네비게이션 이동을 위한 빈 섹션 유지 및 푸터와 연결 -->
+    </section>
+    
+    <footer>
+        <div class="container">
+            <h2>Let's Work Together!</h2>
+            <p>크리에이티브와 데이터를 연결하는 디자인 마케터가 되겠습니다.</p>
+            <div class="contact-info">
+                <p>Email: yerin0666@naver.com</p>
+                <p>Phone: 010-1234-5678</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
